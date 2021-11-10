@@ -1,0 +1,23 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+      - name: Create Release Notes
+        run: 'echo "$(git tag -l --format="%(contents:body)" $GITHUB_REF_NAME)" > RELEASE_NOTES'
+      - name: Make Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: RELEASE_NOTES
+          files: git-release
