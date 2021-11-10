@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.ref }}
       - name: Get Release Name
         id: release-name
-        run: 'echo "::set-output name=NAME::$(git tag -l --format="%(contents:subject)" $GITHUB_REF_NAME)'
+        run: 'echo "::set-output name=NAME::$(git tag -l --format="%(contents:subject)" $GITHUB_REF_NAME)"'
       - name: Create Release Notes
         run: 'echo "$(git tag -l --format="%(contents:body)" $GITHUB_REF_NAME)" > RELEASE_NOTES'
       - name: Make Release
