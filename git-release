@@ -1,0 +1,18 @@
+#!/bin/bash
+# Check original state
+if git config core.commentChar; then
+	HAD_COMMENT_CHAR=true
+	COMMENT_CHAR=$(git config --get core.commentChar)
+else
+	HAD_COMMENT_CHAR=false
+fi
+
+git config core.commentChar ";"
+git tag -a $1 $2
+
+# Revert to original state
+if [ "$HAD_COMMENT_CHAR" = true ]; then
+	git config core.commentChar $COMMENT_CHAR
+else
+	git config --unset core.commentChar
+fi
