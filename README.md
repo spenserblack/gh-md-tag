@@ -4,9 +4,9 @@
 
 I like to write release notes in an annotated tag message.
 I *want* to be able to write them in Markdown format, so that
-they can easily be translated to GitHub release notes. However, there's a
-problem stopping me from being able to do this: `#` to `######` are headers
-in Markdown, but comments in git messages.
+they can [easily be translated to GitHub release notes][tag-to-release].
+However, there's a problem stopping me from being able to do this:
+`#` to `######` are headers in Markdown, but comments in git messages.
 
 This git extension is a shortcut to
 
@@ -19,3 +19,5 @@ This git extension is a shortcut to
 ```shell
 gh release <tag name>
 ```
+
+[tag-to-release]: ./.github/workflows/release.yml
