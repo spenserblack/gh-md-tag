@@ -14,6 +14,12 @@ This git extension is a shortcut to
 2. Start `git tag -a <tag name>`
 3. Revert back to the previous comment character (or unset it if it wasn't set)
 
+## Installation
+
+```shell
+curl https://raw.githubusercontent.com/spenserblack/git-release/HEAD/install.sh | sh
+```
+
 ## Usage
 
 ```shell
