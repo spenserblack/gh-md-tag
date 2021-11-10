@@ -22,8 +22,8 @@ curl https://raw.githubusercontent.com/spenserblack/git-release/HEAD/install.sh 
 
 ## Usage
 
-```shell
-gh release <tag name>
+```
+gh release <tag name> [commit-ish]
 ```
 
 [tag-to-release]: ./.github/workflows/release.yml
