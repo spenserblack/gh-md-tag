@@ -13,6 +13,7 @@ This git extension is a shortcut to
 1. Change the comment character to `;`
 2. Start `git tag -a <tag name>`
 3. Revert back to the previous comment character (or unset it if it wasn't set)
+4. Push the tag to the remote repo (`remote.origin.url`)
 
 ## Installation
 
