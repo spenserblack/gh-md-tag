@@ -2,26 +2,15 @@ name: Release
 
 on:
   push:
-    tags: ['v*.*.*']
+    tags: [ 'v*.*.*' ]
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
-      - name: Get Release Name
-        id: release-name
-        run: 'echo "::set-output name=NAME::$(git tag -l --format="%(contents:subject)" $GITHUB_REF_NAME)"'
-      - name: Create Release Notes
-        run: 'echo "$(git tag -l --format="%(contents:body)" $GITHUB_REF_NAME)" > RELEASE_NOTES'
-      - name: Make Release
-        uses: softprops/action-gh-release@v1
-        with:
-          name: ${{ steps.release-name.outputs.NAME }}
-          body_path: RELEASE_NOTES
-          files: git-release
+      - uses: spenserblack/actions-tag-to-release@v0.1.4
