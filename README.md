@@ -15,6 +15,8 @@ This git extension is a shortcut to
 3. Revert back to the previous comment character (or unset it if it wasn't set)
 4. Push the tag to the remote repo (`remote.origin.url`)
 
+This action pairs well with [my Tag to Release action][release-action].
+
 ## Installation
 
 ```shell
@@ -28,3 +30,4 @@ git release <tag name> [commit-ish]
 ```
 
 [tag-to-release]: ./.github/workflows/release.yml
+[release-action]: https://github.com/marketplace/actions/tag-to-release
