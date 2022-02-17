@@ -23,7 +23,7 @@ This pairs well with [my Tag to Release action][release-action].
 ## Installation
 
 ```shell
-curl https://raw.githubusercontent.com/spenserblack/git-release/HEAD/install.sh | sh
+gh extension install spenserblack/gh-md-tag
 ```
 
 ## Usage
