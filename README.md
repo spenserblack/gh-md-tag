@@ -28,7 +28,7 @@ gh extension install spenserblack/gh-md-tag
 ## Usage
 
 ```
-git release <tag name> [commit-ish]
+git md-tag <tag name> [commit-ish]
 ```
 
 [tag-to-release]: ./.github/workflows/release.yml
