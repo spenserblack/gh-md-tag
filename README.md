@@ -1,4 +1,7 @@
-# `git release`
+# `gh md-tag`
+
+Forked from [git-release](https://github.com/spenserblack/git-release)
+to be a `gh` extension.
 
 ## Motivation
 
