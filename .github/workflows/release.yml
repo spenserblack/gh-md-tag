@@ -17,4 +17,4 @@ jobs:
       - name: Upload Assets
         uses: softprops/action-gh-release@v1
         with:
-          files: git-release
+          files: gh-md-tag
