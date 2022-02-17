@@ -1,6 +1,4 @@
 #!/bin/bash
-REMOTE_URL="$(git config --get remote.origin.url)"
-
 # Check original state
 if git config core.commentChar; then
 	HAD_COMMENT_CHAR=true
@@ -18,5 +16,3 @@ if [ "$HAD_COMMENT_CHAR" = true ]; then
 else
 	git config --unset core.commentChar
 fi
-
-git push "$REMOTE_URL" "$1"
