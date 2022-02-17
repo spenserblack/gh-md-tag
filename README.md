@@ -1,4 +1,7 @@
-# `git release`
+# `gh md-tag`
+
+Forked from [git-release](https://github.com/spenserblack/git-release)
+to be a `gh` extension.
 
 ## Motivation
 
@@ -13,20 +16,19 @@ This git extension is a shortcut to
 1. Change the comment character to `;`
 2. Start `git tag -a <tag name>`
 3. Revert back to the previous comment character (or unset it if it wasn't set)
-4. Push the tag to the remote repo (`remote.origin.url`)
 
 This pairs well with [my Tag to Release action][release-action].
 
 ## Installation
 
 ```shell
-curl https://raw.githubusercontent.com/spenserblack/git-release/HEAD/install.sh | sh
+gh extension install spenserblack/gh-md-tag
 ```
 
 ## Usage
 
 ```
-git release <tag name> [commit-ish]
+git md-tag <tag name> [commit-ish]
 ```
 
 [tag-to-release]: ./.github/workflows/release.yml
