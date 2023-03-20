@@ -3,6 +3,14 @@
 Forked from [git-release](https://github.com/spenserblack/git-release)
 to be a `gh` extension.
 
+## :warning: Archived
+
+To permit Markdown (`# header`), this would change the comment character,
+call git tag, then reverse the comment character. This worked, but one
+can just call `git tag --cleanup=verbatim` to include lines that start
+with `#`. Because a solution already exists, this isn't that useful,
+so I'm archiving it.
+
 ## Motivation
 
 I like to write release notes in an annotated tag message.
